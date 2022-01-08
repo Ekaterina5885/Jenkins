@@ -1,0 +1,5 @@
+{
+    "day": "[data-time-stamp='1641675600']",
+    "time": ".movie-seances__time",
+    "place": ".buying-scheme__wrapper > :nth-child(1) > :nth-child(5)"
+}
