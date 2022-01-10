@@ -1,5 +1,5 @@
 {
     "day": ".page-nav__day_today",
     "time": ".movie-seances__time",
-    "place": ".buying-scheme__wrapper > :nth-child(1) > :nth-child(11)"
+    "place": ".buying-scheme__wrapper > :nth-child(2) > :nth-child(4)"
 }
