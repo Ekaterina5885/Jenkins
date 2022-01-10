@@ -1,6 +1,5 @@
 const selectors = require('../fixtures/selectors/selectors.json');
 const hallData = require('../fixtures/testData/hallData.json');
-const priceData = require('../fixtures/testData/priceData.json');
 const moviesData = require('../fixtures/testData/moviesData.json');
 const filepath = "../../cypress/fixtures/Poster.png";
 
@@ -14,13 +13,10 @@ it('Should add new hall, film, ticket prices and added to the schedule', () => {
     cy.contains('Добавить зал').click();
 
     cy.get(selectors.newHall).click();
-    cy.get(selectors.rows).clear().type(hallData.rows);
-    cy.get(selectors.places).clear().type(hallData.seats);
-    cy.get(selectors.buttonSaveHall).click();
+    cy.newHall();
 
     cy.get(selectors.nameHallPrice).type(hallData.hallName);
-    cy.get(selectors.priceRegular).clear().type(priceData.priceRegular);
-    cy.get(selectors.priceVIP).clear().type(priceData.priceVIP);
+    cy.priceHall();
 
     cy.get(selectors.buttonAddMovie).click();
     cy.get(selectors.movieTitle).type(moviesData.movieTitle);
