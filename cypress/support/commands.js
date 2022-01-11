@@ -19,5 +19,16 @@ Cypress.Commands.add("newHall", () => {
     cy.get(selectors.buttonSaveHall).click();
 });
 
+Cypress.Commands.add("addHall", () => {
+    cy.get(selectors.createHall).click();
+    cy.get(selectors.nameHall).type(hallData.hallName);
+    cy.contains('Добавить зал').click();
+});
+
+Cypress.Commands.add("booking", () => {
+    cy.contains('Забронировать').click();
+	cy.contains('Получить код бронирования').click();
+});
+
 import 'cypress-file-upload';
 import "@4tw/cypress-drag-drop";
